@@ -24,6 +24,7 @@ setup(
             'fusion_node = semantic_mapping.fusion_node:main',
             'depth_from_lidar = semantic_mapping.depth_from_lidar:main',
             'random_explorer = semantic_mapping.random_explorer:main',
+            'yolo_detector_tb4 = semantic_mapping.yolo_detector_tb4:main',
         ],
     },
 )

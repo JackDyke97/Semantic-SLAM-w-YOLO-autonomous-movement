@@ -16,9 +16,7 @@ class YoloDetector(Node):
     def __init__(self):
         super().__init__('yolo_detector')
 
-        # Declare parameters — set use_sim_time via launch file or CLI
-        # Simulation:  --ros-args -p use_sim_time:=true
-        # Real hardware: --ros-args -p use_sim_time:=false  (default)
+
         self.declare_parameter('image_topic', '/camera/image_raw')
         image_topic = self.get_parameter('image_topic').value
 
