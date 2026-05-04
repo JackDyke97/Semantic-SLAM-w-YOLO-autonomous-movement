@@ -58,7 +58,6 @@ class RandomExplorer(Node):
             self.reverse_count = 0
 
     #turning logic - forward is possile, left if obstacle on right, right if obstacle on left
-    #otherwise cry
     def control_loop(self):
         twist = Twist()
 
