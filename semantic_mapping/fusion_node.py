@@ -105,7 +105,7 @@ class FusionNode(Node):
             if len(valid) == 0:
                 continue
 
-            distance = float(np.median(valid)) / 1000.0  # mm to metres
+            distance = float(np.median(valid)) / 1000.0 
             if distance < MIN_DEPTH or distance > MAX_DEPTH:
                 continue
 
@@ -122,9 +122,9 @@ class FusionNode(Node):
                 pose = PoseStamped()
                 pose.header.frame_id = CAMERA_FRAME
                 pose.header.stamp = msg.header.stamp
-                pose.pose.position.x = z_cam    # camera z → robot x (forward)
-                pose.pose.position.y = -x_cam   # camera x → robot -y
-                pose.pose.position.z = -y_cam   # camera y → robot -z
+                pose.pose.position.x = z_cam    
+                pose.pose.position.y = -x_cam   
+                pose.pose.position.z = -y_cam
                 pose.pose.orientation.w = 1.0
 
                 transform = self.tf_buffer.lookup_transform(
